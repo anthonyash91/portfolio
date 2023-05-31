@@ -82,14 +82,18 @@ h1 {
   }
 
   button {
+    align-items: center;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    display: inline-block;
+    display: flex;
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 600;
+    gap: 10px;
     padding: 18px 28px;
+    text-shadow: 1px 1px 0 rgb(0 0 0 / 0.1);
+    transition: padding .3s;
     // width: 100px;
 
     &.contact {
@@ -97,7 +101,24 @@ h1 {
         color: #fff;
     }
 
+    svg {
+        fill: #fff;
+        filter: drop-shadow(1px 1px 0 rgb(0 0 0 / 0.1));
+        // transform: rotate(-40deg);
+        transition: transform .3s, fill 1s, filter 1s;
+    }
+
+    &:hover {
+        padding: 18px 15px 18px 41px;
+
+        svg {
+            fill: $purple;
+            filter: drop-shadow(1px 1px 0 rgb(0 0 0 / 0));
+            transform: rotate(-20deg) translate(60px, 0);
+        }
+    }
+
     &:active {
         transform: translateY(1px);
     }
-  }
+}
