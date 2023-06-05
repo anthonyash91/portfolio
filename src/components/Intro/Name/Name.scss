@@ -1,0 +1,27 @@
+.name {
+  color: #282828;
+
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  span {
+    display: inline-block;
+    height: 12px;
+    margin-right: 10px;
+    position: relative;
+    width: 100px;
+
+    &::before {
+      background-color: #282828;
+      content: "";
+      display: block;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      // transform: translate(0, -50%);
+      width: 100%;
+    }
+  }
+}

@@ -1,16 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
+$purple: #6244C5;
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    background-color: #fff;
-    color: #5a5a5a;
-    overflow-x: hidden;
-    font-family: "Inter", sans-serif;
+	--backgroundSize: 200px;
+	--firstColor: #fff;
+	--gradient: #0000 8%, var(--firstColor) 0 17%, #0000 0 58%;
+
+	background: 
+		linear-gradient(135deg, #0000 20.5%, var(--firstColor) 0 29.5%, #0000 0) 0 calc(var(--backgroundSize) / 4),
+		linear-gradient(45deg,var(--gradient)) calc(var(--backgroundSize) / 2) 0,
+		linear-gradient(135deg, var(--gradient), var(--firstColor) 0 67%, #0000 0),		
+		linear-gradient(45deg, var(--gradient), var(--firstColor) 0 67%, #0000 0 83%, var(--firstColor) 0 92%, #0000 0) #fcfcfc;
+	background-size: var(--backgroundSize) var(--backgroundSize);
+	color: #5a5a5a;
+	font-family: "Inter", sans-serif;
+	overflow-x: hidden;
 }
 
 #container {
@@ -18,21 +29,31 @@ body {
 }
 
 .section {
-	// background: red;
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
 	margin: 0 auto;
 	width: 980px;
 
-    .sub-section {
-        // background: red;
-        // align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        text-align: left;
-        width: 50%;
-    }
+	.sub-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		text-align: left;
+		width: 50%;
+	}
+}
+
+.about {
+	--s: 200px;
+	--c: #6244C5; 
+	--_g: #0000 8%, var(--c) 0 17%, #0000 0 58%;
+	background: 
+		  linear-gradient(135deg, #0000 20.5%,var(--c) 0 29.5%, #0000 0) 0 calc(var(--s)/4),
+		  linear-gradient(45deg, var(--_g)) calc(var(--s)/2) 0,
+		  linear-gradient(135deg, var(--_g), var(--c) 0 67%, #0000 0),		
+		  linear-gradient(45deg, var(--_g), var(--c) 0 67%, #0000 0 83%,var(--c) 0 92%, #0000 0), rgba(#6244C5, .99);
+	background-size: var(--s) var(--s);
+	width: 100%;
 }

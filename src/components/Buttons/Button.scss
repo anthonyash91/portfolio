@@ -1,0 +1,40 @@
+$purple: #6244C5;
+
+button {
+	align-items: center;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	display: flex;
+	font: 600 16px "Inter", sans-serif;
+	gap: 10px;
+	padding: 18px 28px;
+	text-shadow: 1px 1px 0 rgb(0 0 0 / 0.1);
+	transition: background-color .1s, padding .3s;
+
+	&.contact {
+		background-color: $purple;
+		color: #fff;
+
+		&:hover {
+			background-color: #282828;
+			padding: 18px 15px 18px 41px;
+	
+			svg {
+				fill: $purple;
+				filter: drop-shadow(1px 1px 0 rgb(0 0 0 / 0));
+				transform: rotate(-20deg) translate(100px, 0);
+			}
+		}
+	}
+
+	svg {
+		fill: #fff;
+		filter: drop-shadow(1px 1px 0 rgb(0 0 0 / 0.1));
+		transition: transform .3s, fill .6s, filter 1s;
+	}
+
+	&:active {
+		transform: translateY(1px);
+	}
+}

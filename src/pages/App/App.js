@@ -5,6 +5,8 @@ function App() {
     <>
       <div id="container">
         <Intro />
+
+        <div className="section about">hi</div>
       </div>
     </>
   );
